@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>AIチャット</title>
+    <link rel="stylesheet" href="../static/css/chat_page.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 上部バー -->
+        <div class="top-bar">
+            <button class="home-button" onclick="window.location.href='base.html';">🏠</button>
+            <span class="title">AI de 検索</span>
+            <button class="reload-button">⟳</button>
+        </div>
+
+        <!-- メイン表示領域 -->
+        <div id="chat-area" class="chat-area">
+            <h1 class="main-text">お話しください</h1>
+            <div class="example-texts">
+                <p class="example-text">例：スリッパを買いたい</p>
+                <p class="example-text">例：ケトル コンパクト 調理</p>
+            </div>
+        </div>
+
+        <!-- 入力エリア -->
+        <div class="input-bar">
+            <input type="text" class="text-input" id="text-input" placeholder="質問を入力してください">
+            <button class="send-message" onclick="sendMessage()">送信</button>
+            <button class="mic-button">🎤</button>
+        </div>
+
+        <!-- モーダル（隠しておく） -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span> <!-- 閉じるボタン -->
+            <img class="modal-content" id="modalImage">
+        </div>
+
+    </div>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

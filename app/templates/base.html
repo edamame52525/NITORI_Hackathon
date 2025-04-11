@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>チャットボット</title>
+</head>
+<body>
+    <div class="container">
+        <!-- 店舗の地図を見るボタン -->
+        <form action="/map" method="get">
+            <input type="image" src="{{ url_for('static', filename='images/store_map_buttom.png') }}" alt="店舗の地図を見る" class="button-image">
+        </form>
+
+        <!-- 商品を探すボタン -->
+        <form action="{{url_for('chat')}}" method="get">
+            <input type="image" src="{{ url_for('static', filename='images/serch_buttom.png') }}" alt="AIで商品を探す" class="button-image">
+        </form>
+
+    </div>
+</html>
